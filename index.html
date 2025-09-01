@@ -71,6 +71,58 @@
         class="leaf"
       />
     </div>
+    <div class="more-info" style="color:red">
+      <details>
+        <summary>Más información</summary>
+        <h2>Nombre</h2>
+        <img src="foto.jpg" alt="Foto" />
+      </details>
+      <dialog id="gandalfModal">
+        <img src="gandalf.jpg" alt="Gandalf" />
+        <p>¡NO.. PUEDES... PASAR!</p>
+        <button id="close" onclick="document.getElementById('gandalfModal').close()">
+        Ok!
+        </button>
+      </dialog>
+      <button id="show" onclick="document.getElementById('gandalfModal').showModal()">
+        Mostrar
+      </button>
+      <script>
+       alert('¡Hola!');
+      </script>
+      <script>
+        document.getElementById('show').addEventListener('click', function() {
+          document.getElementById('gandalfModal').showModal();
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+          document.getElementById('gandalfModal').close();
+        });
+      </script>
+      <img style="width: 300px;" 
+			src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/
+			2022/10/18/16661071524623.jpg" 
+      id="gandalfImage" alt="Gandalf">
+ <p id="textId"></p>
+        
+<script>
+    document.getElementById("gandalfImage").addEventListener("load", loadImage);
+    function loadImage() {
+        document.getElementById("textId").innerHTML = "Image loaded";
+    }
+</script>
+<!-- EJEMPLO DE ONCLICK QUE CUANDO HAGAMOS CLICK EN EL <p> 
+
+EL TEXTO SE CAMBIARÁ A ROJO -->
+
+<p id="example" onclick="myFunction()">Haz click para cambiarme de color.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("example").style.color = "red";
+}
+</script>
+    </div>
   </body>
 </html>
 
